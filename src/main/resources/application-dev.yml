@@ -1,0 +1,118 @@
+#开发
+server:
+  port: 8080
+
+#默认数据源
+spring:
+  datasource:
+    druid:
+      stat-view-servlet:
+        enabled: true                   # 启用StatViewServlet
+        url-pattern: /druid/*           # 访问内置监控页面的路径，内置监控页面的首页是/druid/index.html
+        reset-enable: false              # 不允许清空统计数据,重新计算
+        login-username: ${database.username}            # 配置监控页面访问密码
+        login-password: ${database.password}
+        allow: 127.0.0.1
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://${host}:3306/aurora?serverTimezone=Asia/Shanghai&allowMultiQueries=true
+      username: ${database.username}
+      password: ${database.password}
+      filters: stat,wall,slf4j
+      filter:
+        stat:
+          merge-sql: true
+          slow-sql-millis: 5000
+    hikari:
+      minimum-idle: 10
+      idle-timeout: 180000
+      maximum-pool-size: 100
+      auto-commit: true
+      pool-name: MyHikariCP
+      max-lifetime: 60000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+
+  redis:
+    host: ${host}
+    port: 6379
+    password: ${redis.password}
+    database: 0
+    lettuce:
+      pool:
+        min-idle: 10
+        max-idle: 100
+        max-active: 100
+        max-wait: 10000
+
+  rabbitmq:
+    host: ${host}
+    port: 5672
+    username: ${rabbit.username}
+    password: ${rabbit.password}
+    listener:
+      simple:
+        retry:
+          enabled: true
+          max-attempts: 3
+          initial-interval: 3000
+
+  mail:
+    host: smtp.qq.com
+    username: ${mail.username}
+    password: ${mail.password}
+    default-encoding: UTF-8
+    protocol: smtp
+    port: 465
+    properties:
+      mail:
+        smtp:
+          auth: true
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
+            port: 465
+          ssl:
+            enable: true
+          starttls:
+            enable: true
+            required: true
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+
+search:
+  mode: mysql
+
+upload:
+  mode: oss
+  local:
+#    url: http://localhost/file/
+#    dir: D:/dev/soft/nginx-1.24.0/html/file/
+    url: /upload
+    dir: C:/D_commonFiles/java_project/aurora-master/aurora-vue/aurora-admin/public/upload
+  oss:
+    url: ${oss.url}
+    endpoint: ${oss.endpoint}
+    accessKeyId: ${oss.accessKeyId}
+    accessKeySecret: ${oss.accessKeySecret}
+    bucketName: ${oss.bucketName}
+
+website:
+  url: https://blog.jonk.top
+
+qq:
+  app-id: xxxxxxx
+  check-token-url: https://graph.qq.com/oauth2.0/me?access_token={access_token}
+  user-info-url: https://graph.qq.com/user/get_user_info?openid={openid}&access_token={access_token}&oauth_consumer_key={oauth_consumer_key}
+logging:
+  level:
+    cn.jay.repository: info
+  config: classpath:log4j2-dev.xml
+
+
