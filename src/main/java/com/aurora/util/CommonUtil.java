@@ -52,10 +52,4 @@ public class CommonUtil {
         }
         return result;
     }
-
-    public static void main(String[] args) {
-        String hashpw = BCrypt.hashpw("z534554102.", BCrypt.gensalt());
-        System.out.println(hashpw);
-    }
-
 }

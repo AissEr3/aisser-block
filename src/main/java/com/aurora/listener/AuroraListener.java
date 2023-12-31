@@ -42,6 +42,7 @@ public class AuroraListener {
 
     @Resource
     EmailUtil emailUtil;
+
     @Resource
     UserInfoService userInfoService;
 
@@ -70,7 +71,7 @@ public class AuroraListener {
         emailDTO.setSubject("未知异常提醒");
         emailDTO.setTemplate("common.html");
         String url = "https://www.blog.jonk.top/admin/#/login";
-        map.put("content", "一只懒猫@博客【" + source.getOptDesc() + "】发生未知异常，"
+        map.put("content", "AissEr@博客【" + source.getOptDesc() + "】发生未知异常，"
                 + "<a style=\"text-decoration:none;color:#12addb\" href=\"" + url + "  \">点击处理</a> <br/><br/>"
                 + source.getExceptionInfo().substring(0, source.getExceptionInfo().indexOf("at"))
         );
