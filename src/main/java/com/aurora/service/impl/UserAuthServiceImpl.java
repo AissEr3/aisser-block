@@ -1,5 +1,6 @@
 package com.aurora.service.impl;
 
+import cn.hutool.core.bean.BeanUtil;
 import com.alibaba.fastjson.JSON;
 import com.aurora.constant.CommonConstant;
 import com.aurora.model.dto.*;
@@ -87,7 +88,6 @@ public class UserAuthServiceImpl implements UserAuthService {
                 .template("common.html")
                 .commentMap(map)
                 .build();
-//        emailUtil.sendHtmlMail(emailDTO);
         rabbitTemplate.convertAndSend(EMAIL_EXCHANGE, "*", new Message(JSON.toJSONBytes(emailDTO), new MessageProperties()));
         redisService.set(USER_CODE_KEY + username, code, CODE_EXPIRE_TIME);
     }
@@ -203,7 +203,7 @@ public class UserAuthServiceImpl implements UserAuthService {
             throw new BizException("验证码错误！");
         }
         UserAuth userAuth = userAuthMapper.selectOne(new LambdaQueryWrapper<UserAuth>()
-                .select(UserAuth::getUsername)
+                .select(UserAuth::getUsername,UserAuth::getId)
                 .eq(UserAuth::getUsername, user.getUsername()));
         return Objects.nonNull(userAuth);
     }

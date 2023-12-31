@@ -52,6 +52,7 @@ public class UserAuthController {
         return ResultVO.ok();
     }
 
+    @OptLog(optType = UPDATE)
     @ApiOperation(value = "修改密码")
     @PutMapping("/users/password")
     public ResultVO<?> updatePassword(@Valid @RequestBody UserVO user) {

@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.aurora.annotation.OptLog;
 import com.aurora.entity.OperationLog;
 import com.aurora.event.OperationLogEvent;
+import com.aurora.model.dto.UserDetailsDTO;
 import com.aurora.util.IpUtil;
 import com.aurora.util.UserUtil;
 import io.swagger.annotations.Api;
@@ -15,6 +16,7 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
@@ -38,6 +40,8 @@ public class OperationLogAspect {
     /**
      * 添加在Controller请求上，对于一些操作进行记录。
      * 通过反射等机制，获取这个请求的信息，将这心信息放在OperationLog中
+     * 通过SpringBoot的事务处理方式，异步处理事务
+     * 监听者将日志信息写入数据库中
      */
     @AfterReturning(value = "operationLogPointCut()", returning = "keys")
     @SuppressWarnings("unchecked")
@@ -66,8 +70,11 @@ public class OperationLogAspect {
             }
         }
         operationLog.setResponseData(JSON.toJSONString(keys));
-        operationLog.setUserId(UserUtil.getUserDetailsDTO().getId());
-        operationLog.setNickname(UserUtil.getUserDetailsDTO().getNickname());
+        UserDetailsDTO userDetailsDTO = UserUtil.getUserDetailsDTO();
+        if(userDetailsDTO != null){
+            operationLog.setUserId(userDetailsDTO.getId());
+            operationLog.setNickname(userDetailsDTO.getNickname());
+        }
         String ipAddress = IpUtil.getIpAddress(request);
         operationLog.setIpAddress(ipAddress);
         operationLog.setIpSource(IpUtil.getIpSource(ipAddress));
