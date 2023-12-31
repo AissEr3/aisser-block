@@ -72,8 +72,6 @@ public class UserAuthServiceImpl implements UserAuthService {
     @Autowired
     private SocialLoginStrategyContext socialLoginStrategyContext;
 
-    @Resource
-    EmailUtil emailUtil;
     @Override
     public void sendCode(String username) {
         if (!checkEmail(username)) {
@@ -157,6 +155,8 @@ public class UserAuthServiceImpl implements UserAuthService {
         userAuthMapper.update(new UserAuth(), new LambdaUpdateWrapper<UserAuth>()
                 .set(UserAuth::getPassword, BCrypt.hashpw(userVO.getPassword(), BCrypt.gensalt()))
                 .eq(UserAuth::getUsername, userVO.getUsername()));
+        // 删除验证码
+        redisService.del(USER_CODE_KEY + userVO.getUsername());
     }
 
     @Override

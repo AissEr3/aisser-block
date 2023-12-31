@@ -98,6 +98,7 @@ public class UserInfoServiceImpl extends ServiceImpl<UserInfoMapper, UserInfo> i
                 .email(emailVO.getEmail())
                 .build();
         userInfoMapper.updateById(userInfo);
+        redisService.del(USER_CODE_KEY + emailVO.getEmail());
     }
 
     @Transactional(rollbackFor = Exception.class)
