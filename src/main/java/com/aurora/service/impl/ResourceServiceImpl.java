@@ -2,8 +2,8 @@ package com.aurora.service.impl;
 
 import com.aurora.model.dto.LabelOptionDTO;
 import com.aurora.model.dto.ResourceDTO;
-import com.aurora.entity.Resource;
-import com.aurora.entity.RoleResource;
+import com.aurora.model.entity.Resource;
+import com.aurora.model.entity.RoleResource;
 import com.aurora.exception.BizException;
 import com.aurora.handler.FilterInvocationSecurityMetadataSourceImpl;
 import com.aurora.mapper.ResourceMapper;

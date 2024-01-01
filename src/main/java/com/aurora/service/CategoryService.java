@@ -3,7 +3,7 @@ package com.aurora.service;
 import com.aurora.model.dto.CategoryAdminDTO;
 import com.aurora.model.dto.CategoryDTO;
 import com.aurora.model.dto.CategoryOptionDTO;
-import com.aurora.entity.Category;
+import com.aurora.model.entity.Category;
 import com.aurora.model.vo.CategoryVO;
 import com.aurora.model.vo.ConditionVO;
 import com.aurora.model.dto.PageResultDTO;

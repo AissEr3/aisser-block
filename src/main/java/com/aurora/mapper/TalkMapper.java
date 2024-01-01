@@ -2,7 +2,7 @@ package com.aurora.mapper;
 
 import com.aurora.model.dto.TalkAdminDTO;
 import com.aurora.model.dto.TalkDTO;
-import com.aurora.entity.Talk;
+import com.aurora.model.entity.Talk;
 import com.aurora.model.vo.ConditionVO;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Param;

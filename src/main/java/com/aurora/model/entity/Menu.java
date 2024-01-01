@@ -1,4 +1,4 @@
-package com.aurora.entity;
+package com.aurora.model.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
 import lombok.AllArgsConstructor;
@@ -10,37 +10,27 @@ import java.time.LocalDateTime;
 
 @Data
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
-@TableName("t_article")
-public class Article {
+@NoArgsConstructor
+@TableName("t_menu")
+public class Menu {
 
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    private Integer userId;
+    private String name;
 
-    private Integer categoryId;
+    private String path;
 
-    private String articleCover;
+    private String component;
 
-    private String articleTitle;
+    private String icon;
 
-    private String articleContent;
+    private Integer orderNum;
 
-    private Integer isTop;
+    private Integer parentId;
 
-    private Integer isFeatured;
-
-    private Integer isDelete;
-
-    private Integer status;
-
-    private Integer type;
-
-    private String password;
-
-    private String originalUrl;
+    private Integer isHidden;
 
     @TableField(fill = FieldFill.INSERT)
     private LocalDateTime createTime;
@@ -49,3 +39,4 @@ public class Article {
     private LocalDateTime updateTime;
 
 }
+

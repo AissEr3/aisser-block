@@ -2,7 +2,7 @@ package com.aurora.service;
 
 import com.aurora.model.dto.FriendLinkAdminDTO;
 import com.aurora.model.dto.FriendLinkDTO;
-import com.aurora.entity.FriendLink;
+import com.aurora.model.entity.FriendLink;
 import com.aurora.model.vo.ConditionVO;
 import com.aurora.model.vo.FriendLinkVO;
 import com.aurora.model.dto.PageResultDTO;

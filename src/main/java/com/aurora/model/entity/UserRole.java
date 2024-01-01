@@ -1,4 +1,4 @@
-package com.aurora.entity;
+package com.aurora.model.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -10,26 +10,16 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
-@TableName("t_topic")
-public class Topic {
+@NoArgsConstructor
+@TableName("t_user_role")
+public class UserRole {
 
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
-    /**
-     * 课题名称
-     */
-    private String topicName;
-    /**
-     * 项目数量
-     */
-    private Integer projectNum;
-    /**
-     * 收录标记
-     */
-    private Integer pullTag;
-    private String giteeUrl;
 
+    private Integer userId;
+
+    private Integer roleId;
 
 }

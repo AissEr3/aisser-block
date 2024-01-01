@@ -1,4 +1,4 @@
-package com.aurora.entity;
+package com.aurora.model.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
 import lombok.AllArgsConstructor;
@@ -12,13 +12,35 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@TableName("t_tag")
-public class Tag {
+@TableName("t_article")
+public class Article {
 
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    private String tagName;
+    private Integer userId;
+
+    private Integer categoryId;
+
+    private String articleCover;
+
+    private String articleTitle;
+
+    private String articleContent;
+
+    private Integer isTop;
+
+    private Integer isFeatured;
+
+    private Integer isDelete;
+
+    private Integer status;
+
+    private Integer type;
+
+    private String password;
+
+    private String originalUrl;
 
     @TableField(fill = FieldFill.INSERT)
     private LocalDateTime createTime;

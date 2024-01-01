@@ -5,7 +5,7 @@ import com.aurora.enums.CommentTypeEnum;
 import com.aurora.model.dto.CommentCountDTO;
 import com.aurora.model.dto.TalkAdminDTO;
 import com.aurora.model.dto.TalkDTO;
-import com.aurora.entity.Talk;
+import com.aurora.model.entity.Talk;
 import com.aurora.exception.BizException;
 import com.aurora.mapper.CommentMapper;
 import com.aurora.mapper.TalkMapper;

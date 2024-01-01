@@ -1,6 +1,6 @@
 package com.aurora.util;
 
-import com.aurora.entity.Job;
+import com.aurora.model.entity.Job;
 import org.apache.commons.lang3.StringUtils;
 
 import java.lang.reflect.InvocationTargetException;

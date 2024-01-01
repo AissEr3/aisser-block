@@ -1,7 +1,7 @@
 package com.aurora.service.impl;
 
 import com.aurora.model.dto.OperationLogDTO;
-import com.aurora.entity.OperationLog;
+import com.aurora.model.entity.OperationLog;
 import com.aurora.mapper.OperationLogMapper;
 import com.aurora.service.OperationLogService;
 import com.aurora.util.BeanCopyUtil;

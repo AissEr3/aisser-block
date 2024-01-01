@@ -1,4 +1,6 @@
-package com.aurora.entity;
+package com.aurora.model.entity;
+
+import java.time.LocalDateTime;
 
 import com.baomidou.mybatisplus.annotation.*;
 import lombok.AllArgsConstructor;
@@ -6,37 +8,23 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
-
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@TableName("t_operation_log")
-public class OperationLog {
+@TableName("t_user_auth")
+public class UserAuth {
 
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    private String optModule;
+    private Integer userInfoId;
 
-    private String optUri;
+    private String username;
 
-    private String optType;
+    private String password;
 
-    private String optMethod;
-
-    private String optDesc;
-
-    private String requestMethod;
-
-    private String requestParam;
-
-    private String responseData;
-
-    private Integer userId;
-
-    private String nickname;
+    private Integer loginType;
 
     private String ipAddress;
 
@@ -47,4 +35,7 @@ public class OperationLog {
 
     @TableField(fill = FieldFill.UPDATE)
     private LocalDateTime updateTime;
+
+    private LocalDateTime lastLoginTime;
+
 }

@@ -1,6 +1,6 @@
 package com.aurora.mapper;
 
-import com.aurora.entity.Menu;
+import com.aurora.model.entity.Menu;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.springframework.stereotype.Repository;
 

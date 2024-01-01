@@ -1,10 +1,10 @@
 package com.aurora.service.impl;
 
 import com.alibaba.fastjson.JSON;
-import com.aurora.entity.Article;
-import com.aurora.entity.Comment;
-import com.aurora.entity.Talk;
-import com.aurora.entity.UserInfo;
+import com.aurora.model.entity.Article;
+import com.aurora.model.entity.Comment;
+import com.aurora.model.entity.Talk;
+import com.aurora.model.entity.UserInfo;
 import com.aurora.enums.CommentTypeEnum;
 import com.aurora.exception.BizException;
 import com.aurora.mapper.ArticleMapper;

@@ -2,8 +2,8 @@ package com.aurora.service.impl;
 
 import com.aurora.model.dto.PhotoAlbumAdminDTO;
 import com.aurora.model.dto.PhotoAlbumDTO;
-import com.aurora.entity.Photo;
-import com.aurora.entity.PhotoAlbum;
+import com.aurora.model.entity.Photo;
+import com.aurora.model.entity.PhotoAlbum;
 import com.aurora.exception.BizException;
 import com.aurora.mapper.PhotoAlbumMapper;
 import com.aurora.mapper.PhotoMapper;

@@ -1,7 +1,7 @@
 package com.aurora.service.impl;
 
 import com.aurora.model.dto.ExceptionLogDTO;
-import com.aurora.entity.ExceptionLog;
+import com.aurora.model.entity.ExceptionLog;
 import com.aurora.mapper.ExceptionLogMapper;
 import com.aurora.service.ExceptionLogService;
 import com.aurora.util.BeanCopyUtil;

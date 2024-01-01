@@ -2,10 +2,10 @@ package com.aurora.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.aurora.consumer.SubscribeConsumer;
-import com.aurora.entity.Article;
-import com.aurora.entity.ArticleTag;
-import com.aurora.entity.Category;
-import com.aurora.entity.Tag;
+import com.aurora.model.entity.Article;
+import com.aurora.model.entity.ArticleTag;
+import com.aurora.model.entity.Category;
+import com.aurora.model.entity.Tag;
 import com.aurora.enums.FileExtEnum;
 import com.aurora.enums.FilePathEnum;
 import com.aurora.exception.BizException;

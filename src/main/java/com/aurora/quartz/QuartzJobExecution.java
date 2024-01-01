@@ -1,6 +1,6 @@
 package com.aurora.quartz;
 
-import com.aurora.entity.Job;
+import com.aurora.model.entity.Job;
 import com.aurora.util.JobInvokeUtil;
 import org.quartz.JobExecutionContext;
 

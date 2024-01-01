@@ -1,7 +1,7 @@
 package com.aurora.util;
 
 import com.aurora.constant.ScheduleConstant;
-import com.aurora.entity.Job;
+import com.aurora.model.entity.Job;
 import com.aurora.enums.JobStatusEnum;
 import com.aurora.exception.TaskException;
 import com.aurora.quartz.QuartzDisallowConcurrentExecution;

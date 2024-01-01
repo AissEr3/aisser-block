@@ -1,7 +1,7 @@
 package com.aurora.model.dto;
 
-import com.aurora.entity.Tag;
-import com.aurora.entity.UserInfo;
+import com.aurora.model.entity.Tag;
+import com.aurora.model.entity.UserInfo;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

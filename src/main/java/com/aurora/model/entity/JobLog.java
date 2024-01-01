@@ -1,22 +1,26 @@
-package com.aurora.entity;
+package com.aurora.model.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.Date;
 
-import io.swagger.annotations.ApiModelProperty;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@TableName("t_job")
-public class Job {
+@TableName("t_job_log")
+public class JobLog {
 
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
+
+    private Integer jobId;
 
     private String jobName;
 
@@ -24,23 +28,16 @@ public class Job {
 
     private String invokeTarget;
 
-    private String cronExpression;
-
-    private Integer misfirePolicy;
-
-    private Integer concurrent;
+    private String jobMessage;
 
     private Integer status;
+
+    private String exceptionInfo;
 
     @TableField(fill = FieldFill.INSERT)
     private LocalDateTime createTime;
 
-    @TableField(fill = FieldFill.UPDATE)
-    private LocalDateTime updateTime;
+    private Date startTime;
 
-    private String remark;
-
-    @TableField(exist = false)
-    private Date nextValidTime;
-
+    private Date endTime;
 }

@@ -2,7 +2,7 @@ package com.aurora.service;
 
 import com.aurora.model.dto.LabelOptionDTO;
 import com.aurora.model.dto.ResourceDTO;
-import com.aurora.entity.Resource;
+import com.aurora.model.entity.Resource;
 import com.aurora.model.vo.ConditionVO;
 import com.aurora.model.vo.ResourceVO;
 import com.baomidou.mybatisplus.extension.service.IService;

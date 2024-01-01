@@ -1,8 +1,8 @@
 package com.aurora.consumer;
 
 
-import com.aurora.entity.Article;
-import com.aurora.entity.UserInfo;
+import com.aurora.model.entity.Article;
+import com.aurora.model.entity.UserInfo;
 import com.aurora.model.dto.EmailDTO;
 import com.aurora.service.ArticleService;
 import com.aurora.service.UserInfoService;

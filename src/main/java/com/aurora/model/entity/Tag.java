@@ -1,31 +1,24 @@
-package com.aurora.entity;
+package com.aurora.model.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
-
-import java.time.LocalDateTime;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+
 @Data
 @Builder
-@AllArgsConstructor
 @NoArgsConstructor
-@TableName("t_friend_link")
-public class FriendLink {
+@AllArgsConstructor
+@TableName("t_tag")
+public class Tag {
 
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    private String linkName;
-
-    private String linkAvatar;
-
-    private String linkAddress;
-
-    private String linkIntro;
+    private String tagName;
 
     @TableField(fill = FieldFill.INSERT)
     private LocalDateTime createTime;

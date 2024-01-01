@@ -56,6 +56,10 @@ spring:
           max-attempts: 3
           initial-interval: 3000
 
+  elasticsearch:
+    rest:
+      uris: ${host}:9200
+
   mail:
     host: smtp.qq.com
     username: ${mail.username}
@@ -87,15 +91,14 @@ mybatis-plus:
     map-underscore-to-camel-case: true
 
 search:
+#  mode: elasticsearch
   mode: mysql
 
 upload:
   mode: oss
   local:
-#    url: http://localhost/file/
-#    dir: D:/dev/soft/nginx-1.24.0/html/file/
-    url: /upload
-    dir: C:/D_commonFiles/java_project/aurora-master/aurora-vue/aurora-admin/public/upload
+    url: http://localhost/file/
+    dir: D:/dev/soft/nginx-1.24.0/html/file/
   oss:
     url: ${oss.url}
     endpoint: ${oss.endpoint}
@@ -104,7 +107,7 @@ upload:
     bucketName: ${oss.bucketName}
 
 website:
-  url: https://blog.jonk.top
+  url: http://localhost:8081
 
 qq:
   app-id: xxxxxxx

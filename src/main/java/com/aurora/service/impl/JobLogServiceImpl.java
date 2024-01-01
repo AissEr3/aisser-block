@@ -1,7 +1,7 @@
 package com.aurora.service.impl;
 
 import com.aurora.model.dto.JobLogDTO;
-import com.aurora.entity.JobLog;
+import com.aurora.model.entity.JobLog;
 import com.aurora.mapper.JobLogMapper;
 import com.aurora.service.JobLogService;
 import com.aurora.util.BeanCopyUtil;

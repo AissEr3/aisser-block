@@ -3,8 +3,8 @@ package com.aurora.service.impl;
 
 import com.aurora.model.dto.TagAdminDTO;
 import com.aurora.model.dto.TagDTO;
-import com.aurora.entity.ArticleTag;
-import com.aurora.entity.Tag;
+import com.aurora.model.entity.ArticleTag;
+import com.aurora.model.entity.Tag;
 import com.aurora.exception.BizException;
 import com.aurora.mapper.ArticleTagMapper;
 import com.aurora.mapper.TagMapper;

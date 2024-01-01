@@ -1,4 +1,4 @@
-package com.aurora.entity;
+package com.aurora.model.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
 import lombok.AllArgsConstructor;
@@ -10,15 +10,17 @@ import java.time.LocalDateTime;
 
 @Data
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
-@TableName("t_about")
-public class About {
+@NoArgsConstructor
+@TableName("t_role")
+public class Role {
 
-    @TableId(type = IdType.AUTO)
+    @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    private String content;
+    private String roleName;
+
+    private Integer isDisable;
 
     @TableField(fill = FieldFill.INSERT)
     private LocalDateTime createTime;

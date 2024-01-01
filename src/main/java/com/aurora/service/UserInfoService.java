@@ -3,7 +3,7 @@ package com.aurora.service;
 import com.aurora.model.dto.PageResultDTO;
 import com.aurora.model.dto.UserInfoDTO;
 import com.aurora.model.dto.UserOnlineDTO;
-import com.aurora.entity.UserInfo;
+import com.aurora.model.entity.UserInfo;
 import com.aurora.model.vo.*;
 import com.baomidou.mybatisplus.extension.service.IService;
 import org.springframework.web.multipart.MultipartFile;

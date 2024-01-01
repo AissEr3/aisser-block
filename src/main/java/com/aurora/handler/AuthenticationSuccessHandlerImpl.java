@@ -2,7 +2,7 @@ package com.aurora.handler;
 
 import com.alibaba.fastjson.JSON;
 import com.aurora.constant.CommonConstant;
-import com.aurora.entity.UserAuth;
+import com.aurora.model.entity.UserAuth;
 import com.aurora.mapper.UserAuthMapper;
 import com.aurora.model.dto.UserDetailsDTO;
 import com.aurora.model.dto.UserInfoDTO;

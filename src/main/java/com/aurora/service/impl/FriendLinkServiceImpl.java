@@ -1,6 +1,6 @@
 package com.aurora.service.impl;
 
-import com.aurora.entity.FriendLink;
+import com.aurora.model.entity.FriendLink;
 import com.aurora.mapper.FriendLinkMapper;
 import com.aurora.model.dto.FriendLinkAdminDTO;
 import com.aurora.model.dto.FriendLinkDTO;

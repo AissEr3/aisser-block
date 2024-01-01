@@ -1,6 +1,6 @@
 package com.aurora.service.impl;
 
-import com.aurora.entity.Job;
+import com.aurora.model.entity.Job;
 import com.aurora.enums.JobStatusEnum;
 import com.aurora.exception.BizException;
 import com.aurora.mapper.JobMapper;

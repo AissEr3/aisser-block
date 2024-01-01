@@ -1,7 +1,7 @@
 package com.aurora.listener;
 
-import com.aurora.entity.ExceptionLog;
-import com.aurora.entity.OperationLog;
+import com.aurora.model.entity.ExceptionLog;
+import com.aurora.model.entity.OperationLog;
 import com.aurora.event.ExceptionLogEvent;
 import com.aurora.event.OperationLogEvent;
 import com.aurora.mapper.ExceptionLogMapper;

@@ -1,6 +1,6 @@
 package com.aurora.service.impl;
 
-import com.aurora.entity.RoleMenu;
+import com.aurora.model.entity.RoleMenu;
 import com.aurora.mapper.RoleMenuMapper;
 import com.aurora.service.RoleMenuService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

@@ -1,36 +1,37 @@
-package com.aurora.entity;
+package com.aurora.model.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
+
+import java.time.LocalDateTime;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
-
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@TableName("t_menu")
-public class Menu {
+@TableName("t_user_info")
+public class UserInfo {
 
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    private String name;
+    private String email;
 
-    private String path;
+    private String nickname;
 
-    private String component;
+    private String avatar;
 
-    private String icon;
+    private String intro;
 
-    private Integer orderNum;
+    private String website;
 
-    private Integer parentId;
+    private Integer isSubscribe;
 
-    private Integer isHidden;
+    private Integer isDisable;
 
     @TableField(fill = FieldFill.INSERT)
     private LocalDateTime createTime;
@@ -39,4 +40,3 @@ public class Menu {
     private LocalDateTime updateTime;
 
 }
-

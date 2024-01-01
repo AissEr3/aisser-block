@@ -1,37 +1,25 @@
-package com.aurora.entity;
+package com.aurora.model.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
-
-import java.time.LocalDateTime;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+
 @Data
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@TableName("t_user_info")
-public class UserInfo {
+@Builder
+@TableName(value = "t_website_config")
+public class WebsiteConfig {
 
-    @TableId(value = "id", type = IdType.AUTO)
+    @TableId(type = IdType.AUTO)
     private Integer id;
 
-    private String email;
-
-    private String nickname;
-
-    private String avatar;
-
-    private String intro;
-
-    private String website;
-
-    private Integer isSubscribe;
-
-    private Integer isDisable;
+    private String config;
 
     @TableField(fill = FieldFill.INSERT)
     private LocalDateTime createTime;

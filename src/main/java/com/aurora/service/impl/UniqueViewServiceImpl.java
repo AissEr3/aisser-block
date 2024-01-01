@@ -3,7 +3,7 @@ package com.aurora.service.impl;
 import cn.hutool.core.date.DateTime;
 import cn.hutool.core.date.DateUtil;
 import com.aurora.model.dto.UniqueViewDTO;
-import com.aurora.entity.UniqueView;
+import com.aurora.model.entity.UniqueView;
 import com.aurora.mapper.UniqueViewMapper;
 import com.aurora.service.UniqueViewService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

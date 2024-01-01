@@ -1,7 +1,7 @@
 package com.aurora.aspect;
 
 import com.alibaba.fastjson.JSON;
-import com.aurora.entity.ExceptionLog;
+import com.aurora.model.entity.ExceptionLog;
 import com.aurora.event.ExceptionLogEvent;
 import com.aurora.exception.BizException;
 import com.aurora.util.ExceptionUtil;

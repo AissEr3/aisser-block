@@ -1,6 +1,6 @@
 package com.aurora.mapper;
 
-import com.aurora.entity.JobLog;
+import com.aurora.model.entity.JobLog;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.springframework.stereotype.Repository;
 

@@ -1,6 +1,6 @@
 package com.aurora.strategy.impl;
 
-import com.aurora.entity.Article;
+import com.aurora.model.entity.Article;
 import com.aurora.mapper.ArticleMapper;
 import com.aurora.model.dto.ArticleSearchDTO;
 import com.aurora.strategy.SearchStrategy;

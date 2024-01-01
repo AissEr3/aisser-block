@@ -4,7 +4,7 @@ import com.aurora.model.dto.CommentAdminDTO;
 import com.aurora.model.dto.CommentCountDTO;
 import com.aurora.model.dto.CommentDTO;
 import com.aurora.model.dto.ReplyDTO;
-import com.aurora.entity.Comment;
+import com.aurora.model.entity.Comment;
 import com.aurora.model.vo.CommentVO;
 import com.aurora.model.vo.ConditionVO;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;

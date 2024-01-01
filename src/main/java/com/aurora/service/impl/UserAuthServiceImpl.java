@@ -1,12 +1,11 @@
 package com.aurora.service.impl;
 
-import cn.hutool.core.bean.BeanUtil;
 import com.alibaba.fastjson.JSON;
 import com.aurora.constant.CommonConstant;
 import com.aurora.model.dto.*;
-import com.aurora.entity.UserAuth;
-import com.aurora.entity.UserInfo;
-import com.aurora.entity.UserRole;
+import com.aurora.model.entity.UserAuth;
+import com.aurora.model.entity.UserInfo;
+import com.aurora.model.entity.UserRole;
 import com.aurora.enums.LoginTypeEnum;
 import com.aurora.enums.RoleEnum;
 import com.aurora.exception.BizException;
@@ -18,7 +17,6 @@ import com.aurora.service.RedisService;
 import com.aurora.service.TokenService;
 import com.aurora.service.UserAuthService;
 import com.aurora.strategy.context.SocialLoginStrategyContext;
-import com.aurora.util.EmailUtil;
 import com.aurora.util.PageUtil;
 import com.aurora.util.UserUtil;
 import com.aurora.model.vo.*;
@@ -34,7 +32,6 @@ import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.annotation.Resource;
 import java.util.*;
 import java.util.stream.Collectors;
 

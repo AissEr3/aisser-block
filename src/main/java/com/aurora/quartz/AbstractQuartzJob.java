@@ -1,8 +1,8 @@
 package com.aurora.quartz;
 
 import com.aurora.constant.ScheduleConstant;
-import com.aurora.entity.Job;
-import com.aurora.entity.JobLog;
+import com.aurora.model.entity.Job;
+import com.aurora.model.entity.JobLog;
 import com.aurora.mapper.JobLogMapper;
 import com.aurora.util.ExceptionUtil;
 import com.aurora.util.SpringUtil;

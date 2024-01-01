@@ -2,7 +2,7 @@ package com.aurora.aspect;
 
 import com.alibaba.fastjson.JSON;
 import com.aurora.annotation.OptLog;
-import com.aurora.entity.OperationLog;
+import com.aurora.model.entity.OperationLog;
 import com.aurora.event.OperationLogEvent;
 import com.aurora.model.dto.UserDetailsDTO;
 import com.aurora.util.IpUtil;
@@ -16,7 +16,6 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
-import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;

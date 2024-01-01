@@ -1,26 +1,33 @@
-package com.aurora.entity;
+package com.aurora.model.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
+
+import java.time.LocalDateTime;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
-
 @Data
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@TableName("t_role")
-public class Role {
+@Builder
+@TableName(value = "t_photo")
+public class Photo {
 
-    @TableId(value = "id", type = IdType.AUTO)
+    @TableId(type = IdType.AUTO)
     private Integer id;
 
-    private String roleName;
+    private Integer albumId;
 
-    private Integer isDisable;
+    private String photoName;
+
+    private String photoDesc;
+
+    private String photoSrc;
+
+    private Integer isDelete;
 
     @TableField(fill = FieldFill.INSERT)
     private LocalDateTime createTime;

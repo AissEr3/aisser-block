@@ -2,7 +2,7 @@ package com.aurora.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.aurora.model.dto.*;
-import com.aurora.entity.*;
+import com.aurora.model.entity.*;
 import com.aurora.mapper.*;
 import com.aurora.service.AuroraInfoService;
 import com.aurora.service.RedisService;

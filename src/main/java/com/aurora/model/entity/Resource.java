@@ -1,4 +1,5 @@
-package com.aurora.entity;
+package com.aurora.model.entity;
+
 
 import com.baomidou.mybatisplus.annotation.*;
 import lombok.AllArgsConstructor;
@@ -8,21 +9,25 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
-/**
- * @author 一只懒猫
- * 网站访问量
- */
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@TableName("t_unique_view")
-public class UniqueView {
+@TableName("t_resource")
+public class Resource {
 
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    private Integer viewsCount;
+    private String resourceName;
+
+    private String url;
+
+    private String requestMethod;
+
+    private Integer parentId;
+
+    private Integer isAnonymous;
 
     @TableField(fill = FieldFill.INSERT)
     private LocalDateTime createTime;

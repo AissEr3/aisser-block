@@ -1,4 +1,4 @@
-package com.aurora.entity;
+package com.aurora.model.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -12,14 +12,14 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@TableName("t_role_menu")
-public class RoleMenu {
+@TableName("t_role_resource")
+public class RoleResource {
 
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
     private Integer roleId;
 
-    private Integer menuId;
+    private Integer resourceId;
 
 }

@@ -2,9 +2,8 @@ package com.aurora.service;
 
 import com.aurora.model.dto.PageResultDTO;
 import com.aurora.model.dto.PhotoAdminDTO;
-import com.aurora.model.dto.PhotoAlbumAdminDTO;
 import com.aurora.model.dto.PhotoDTO;
-import com.aurora.entity.Photo;
+import com.aurora.model.entity.Photo;
 import com.aurora.model.vo.*;
 import com.baomidou.mybatisplus.extension.service.IService;
 

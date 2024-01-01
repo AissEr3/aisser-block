@@ -1,9 +1,8 @@
-package com.aurora.entity;
+package com.aurora.model.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,32 +11,26 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Builder
-@NoArgsConstructor
 @AllArgsConstructor
-@TableName("t_job_log")
-public class JobLog {
+@NoArgsConstructor
+@TableName("t_friend_link")
+public class FriendLink {
 
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    private Integer jobId;
+    private String linkName;
 
-    private String jobName;
+    private String linkAvatar;
 
-    private String jobGroup;
+    private String linkAddress;
 
-    private String invokeTarget;
-
-    private String jobMessage;
-
-    private Integer status;
-
-    private String exceptionInfo;
+    private String linkIntro;
 
     @TableField(fill = FieldFill.INSERT)
     private LocalDateTime createTime;
 
-    private Date startTime;
+    @TableField(fill = FieldFill.UPDATE)
+    private LocalDateTime updateTime;
 
-    private Date endTime;
 }

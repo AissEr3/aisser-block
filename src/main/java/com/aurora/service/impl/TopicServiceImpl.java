@@ -1,6 +1,6 @@
 package com.aurora.service.impl;
 
-import com.aurora.entity.Topic;
+import com.aurora.model.entity.Topic;
 import com.aurora.mapper.TopicMapper;
 import com.aurora.service.TopicService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

@@ -1,4 +1,4 @@
-package com.aurora.entity;
+package com.aurora.model.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
 
@@ -10,24 +10,30 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-@TableName(value = "t_photo")
-public class Photo {
+@TableName("t_comment")
+public class Comment {
 
-    @TableId(type = IdType.AUTO)
+    @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    private Integer albumId;
+    private Integer userId;
 
-    private String photoName;
+    private Integer replyUserId;
 
-    private String photoDesc;
+    private Integer topicId;
 
-    private String photoSrc;
+    private String commentContent;
+
+    private Integer parentId;
+
+    private Integer type;
 
     private Integer isDelete;
+
+    private Integer isReview;
 
     @TableField(fill = FieldFill.INSERT)
     private LocalDateTime createTime;

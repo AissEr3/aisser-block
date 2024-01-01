@@ -3,7 +3,7 @@ package com.aurora.service;
 import com.aurora.model.dto.LabelOptionDTO;
 import com.aurora.model.dto.MenuDTO;
 import com.aurora.model.dto.UserMenuDTO;
-import com.aurora.entity.Menu;
+import com.aurora.model.entity.Menu;
 import com.aurora.model.vo.ConditionVO;
 import com.aurora.model.vo.IsHiddenVO;
 import com.aurora.model.vo.MenuVO;

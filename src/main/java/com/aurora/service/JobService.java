@@ -1,7 +1,7 @@
 package com.aurora.service;
 
 import com.aurora.model.dto.JobDTO;
-import com.aurora.entity.Job;
+import com.aurora.model.entity.Job;
 import com.aurora.model.dto.PageResultDTO;
 import com.aurora.model.vo.*;
 import com.baomidou.mybatisplus.extension.service.IService;

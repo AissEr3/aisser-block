@@ -12,12 +12,12 @@
         <result property="createTime" column="create_time"/>
         <result property="updateTime" column="update_time"/>
         <result property="categoryName" column="category_name"/>
-        <association property="author" javaType="com.aurora.entity.UserInfo">
+        <association property="author" javaType="com.aurora.model.entity.UserInfo">
             <result property="nickname" column="author_nickname"/>
             <result property="website" column="author_website"/>
             <result property="avatar" column="author_avatar"/>
         </association>
-        <collection property="tags" ofType="com.aurora.entity.Tag">
+        <collection property="tags" ofType="com.aurora.model.entity.Tag">
             <result property="tagName" column="tag_name"/>
         </collection>
     </resultMap>
@@ -33,12 +33,12 @@
         <result property="categoryName" column="category_name"/>
         <result property="type" column="type"/>
         <result property="originalUrl" column="original_url"/>
-        <association property="author" javaType="com.aurora.entity.UserInfo">
+        <association property="author" javaType="com.aurora.model.entity.UserInfo">
             <result property="nickname" column="author_nickname"/>
             <result property="website" column="author_website"/>
             <result property="avatar" column="author_avatar"/>
         </association>
-        <collection property="tags" ofType="com.aurora.entity.Tag">
+        <collection property="tags" ofType="com.aurora.model.entity.Tag">
             <result property="tagName" column="tag_name"/>
         </collection>
     </resultMap>
