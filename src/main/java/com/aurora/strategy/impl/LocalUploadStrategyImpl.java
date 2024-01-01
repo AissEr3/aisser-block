@@ -10,9 +10,6 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 
-/**
- * TODO 文件本地存储方案
- */
 @Slf4j
 @Service("localUploadStrategyImpl")
 public class LocalUploadStrategyImpl extends AbstractUploadStrategyImpl {

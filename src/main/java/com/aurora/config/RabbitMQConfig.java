@@ -9,6 +9,9 @@ import org.springframework.context.annotation.Configuration;
 
 import static com.aurora.constant.RabbitMQConstant.*;
 
+/**
+ * RabbitMQ配置信息，创建队列和路由，并将路由与队列绑定在一起
+ */
 @Configuration
 public class RabbitMQConfig {
 

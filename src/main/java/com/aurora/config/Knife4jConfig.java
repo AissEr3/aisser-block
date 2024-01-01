@@ -14,6 +14,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc;
 
 import java.util.Collections;
 
+/**
+ * Swagger配置信息
+ */
 @Configuration
 @EnableSwagger2WebMvc
 public class Knife4jConfig {
@@ -22,7 +25,7 @@ public class Knife4jConfig {
     public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .protocols(Collections.singleton("https"))
-                .host("http://www.blog.jonk.top")
+                .host("http://www.blog.AissEr.top")
                 .apiInfo(apiInfo())
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.aurora.controller"))
@@ -34,8 +37,8 @@ public class Knife4jConfig {
         return new ApiInfoBuilder()
                 .title("aurora文档")
                 .description("aurora")
-                .contact(new Contact("一只懒猫", "", "969662795@qq.com"))
-                .termsOfServiceUrl("http://www.blog.jonk.top/api")
+                .contact(new Contact("AissEr-", "", "969662795@qq.com"))
+                .termsOfServiceUrl("http://www.blog.AissEr.top/api")
                 .version("1.0")
                 .build();
     }

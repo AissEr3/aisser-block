@@ -1,7 +1,8 @@
 package com.aurora.juhe.common;
 
 /**
- * @ClassName JuheConstant * @Description TODO
+ * @ClassName JuheConstant
+ * @Description TODO
  * @Author jonk
  * @Date 下午2:04 24/5/2023
  * @Version 1.0

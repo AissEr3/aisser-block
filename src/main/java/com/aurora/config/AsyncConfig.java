@@ -10,6 +10,9 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 @Configuration
 public class AsyncConfig {
 
+    /**
+     * 配置异步执行方法的线程池大小
+     */
     @Bean
     public TaskExecutor taskExecutor() {
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
